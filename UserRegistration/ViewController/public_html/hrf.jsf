@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="hrf.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/oracle/templates/tabletFirstTemplate.jspx" id="pt1">
+                <f:facet name="header"/>
+                <f:facet name="status"/>
+                <f:facet name="appNav"/>
+                <f:facet name="globalLinks"/>
+                <f:facet name="footer"/>
+                <f:facet name="center">
+                    <af:panelDashboard id="pd1" columns="2" rowHeight="350px">
+                        <af:panelBox text="User" id="pb1" showDisclosure="false">
+                            <f:facet name="toolbar"/>
+                            <af:table value="#{bindings.UUserView11.collectionModel}" var="row"
+                                      rows="#{bindings.UUserView11.rangeSize}"
+                                      emptyText="#{bindings.UUserView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.UUserView11.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.UUserView11.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.UUserView11.rangeSize}" id="t1">
+                                <af:column headerText="#{bindings.UUserView11.hints.Firstname.label}" id="c1">
+                                    <af:inputText value="#{row.bindings.Firstname.inputValue}"
+                                                  label="#{bindings.UUserView11.hints.Firstname.label}"
+                                                  required="#{bindings.UUserView11.hints.Firstname.mandatory}"
+                                                  columns="#{bindings.UUserView11.hints.Firstname.displayWidth}"
+                                                  maximumLength="#{bindings.UUserView11.hints.Firstname.precision}"
+                                                  shortDesc="#{bindings.UUserView11.hints.Firstname.tooltip}" id="it1">
+                                        <f:validator binding="#{row.bindings.Firstname.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.UUserView11.hints.Lastname.label}" id="c2">
+                                    <af:inputText value="#{row.bindings.Lastname.inputValue}"
+                                                  label="#{bindings.UUserView11.hints.Lastname.label}"
+                                                  required="#{bindings.UUserView11.hints.Lastname.mandatory}"
+                                                  columns="#{bindings.UUserView11.hints.Lastname.displayWidth}"
+                                                  maximumLength="#{bindings.UUserView11.hints.Lastname.precision}"
+                                                  shortDesc="#{bindings.UUserView11.hints.Lastname.tooltip}" id="it2">
+                                        <f:validator binding="#{row.bindings.Lastname.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.UUserView11.hints.Role.label}" id="c3">
+                                    <af:inputText value="#{row.bindings.Role.inputValue}"
+                                                  label="#{bindings.UUserView11.hints.Role.label}"
+                                                  required="#{bindings.UUserView11.hints.Role.mandatory}"
+                                                  columns="#{bindings.UUserView11.hints.Role.displayWidth}"
+                                                  maximumLength="#{bindings.UUserView11.hints.Role.precision}"
+                                                  shortDesc="#{bindings.UUserView11.hints.Role.tooltip}" id="it3">
+                                        <f:validator binding="#{row.bindings.Role.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelBox>
+                        <af:panelBox text="PanelBox2" id="pb2" showDisclosure="false">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                        <af:panelBox text="PanelBox3" id="pb3" showDisclosure="false">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                        <af:panelBox text="PanelBox4" id="pb4" showDisclosure="false">
+                            <f:facet name="toolbar"/>
+                        </af:panelBox>
+                    </af:panelDashboard>
+                </f:facet>
+                <f:facet name="start">
+                    <af:listView value="#{bindings.UUserView1.collectionModel}" var="item"
+                                 emptyText="#{bindings.UUserView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                 fetchSize="#{bindings.UUserView1.rangeSize}" id="lv1" selection="single"
+                                 selectionListener="#{bindings.UUserView1.treeModel.makeCurrent}">
+                        <af:listItem id="li1">
+                            <af:panelGridLayout id="pgl1">
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr1">
+                                    <af:gridCell marginStart="5px" width="50%" id="gc1">
+                                        <af:outputFormatted value="#{item.bindings.Firstname.inputValue}" id="of1"/>
+                                    </af:gridCell>
+                                    <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2">
+                                        <af:outputFormatted value="#{item.bindings.Lastname.inputValue}" id="of2"/>
+                                    </af:gridCell>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </af:listItem>
+                    </af:listView>
+                </f:facet>
+                <f:facet name="end"/>
+                <f:attribute name="endWidth" value="0px"/>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

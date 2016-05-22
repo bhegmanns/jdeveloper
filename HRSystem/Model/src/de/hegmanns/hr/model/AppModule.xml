@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="de.hegmanns.hr.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="de.hegmanns.hr.model.EmployeesView"/>
+  <ViewUsage
+    Name="JobsView1"
+    ViewObjectName="de.hegmanns.hr.model.JobsView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="de.hegmanns.hr.model.EmployeesView"/>
+  <ViewUsage
+    Name="DepartmentsView2"
+    ViewObjectName="de.hegmanns.hr.model.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="de.hegmanns.hr.model.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView4"
+    ViewObjectName="de.hegmanns.hr.model.EmployeesView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="de.hegmanns.hr.model.EmpManagerFkLink"
+    SrcViewUsageName="de.hegmanns.hr.model.AppModule.EmployeesView1"
+    DstViewUsageName="de.hegmanns.hr.model.AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="de.hegmanns.hr.model.DeptMgrFkLink"
+    SrcViewUsageName="de.hegmanns.hr.model.AppModule.EmployeesView1"
+    DstViewUsageName="de.hegmanns.hr.model.AppModule.DepartmentsView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="de.hegmanns.hr.model.EmpDeptFkLink"
+    SrcViewUsageName="de.hegmanns.hr.model.AppModule.DepartmentsView1"
+    DstViewUsageName="de.hegmanns.hr.model.AppModule.EmployeesView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpJobFkLink1"
+    ViewLinkObjectName="de.hegmanns.hr.model.EmpJobFkLink"
+    SrcViewUsageName="de.hegmanns.hr.model.AppModule.JobsView1"
+    DstViewUsageName="de.hegmanns.hr.model.AppModule.EmployeesView4"
+    Reversed="false"/>
+</AppModule>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <h:head></h:head>
+        <h:body>
+            <h:form title="klicken" binding="#{firstback.form1}" id="form1">
+                <h:inputText binding="#{firstback.inputText1}" id="inputText1"/>
+                <h:commandButton value="klicken" binding="#{firstback.commandButton1}" id="commandButton1"
+                                 action="#{firstback.commandButton1_action}"/>
+                <h:outputText binding="#{firstback.outputText1}" id="outputText1"/>
+                <br/>
+            </h:form>
+        </h:body>
+    </html>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:firstback-->
+</f:view>

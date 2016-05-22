@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="hrfPageDef"
+                Package="de.hegmanns.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="UUserView1" RangeSize="25" DataControl="AppModuleDataControl" id="UUserView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="UUserView1Iterator" id="UUserView1">
+      <nodeDefinition DefName="de.hegmanns.model.UUserView" Name="UUserView10">
+        <AttrNames>
+          <Item Value="Firstname"/>
+          <Item Value="Lastname"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="UUserView1Iterator" id="UUserView11">
+      <nodeDefinition DefName="de.hegmanns.model.UUserView" Name="UUserView110">
+        <AttrNames>
+          <Item Value="Firstname"/>
+          <Item Value="Lastname"/>
+          <Item Value="Role"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

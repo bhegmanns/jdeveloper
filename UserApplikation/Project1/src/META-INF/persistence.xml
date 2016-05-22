@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="XX">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>jdbc/oracle-bernd</jta-data-source>
+    <class>de.hegmanns.ejb.User</class>
+    <class>de.hegmanns.ejb.Applikation</class>
+    <class>de.hegmanns.ejb.ApplikationLogin</class>
+    <properties>
+      <property name="eclipselink.target-server" value="WebLogic_10"/>
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+      <property name="javax.persistence.jtaDataSource"
+                value="jdbc/oracle-bernd"/>
+    </properties>
+    </persistence-unit>
+</persistence>

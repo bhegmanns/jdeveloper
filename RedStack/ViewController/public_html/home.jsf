@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="home.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps1">
+                <f:facet name="first">
+                    <af:outputText value="outputText1" id="ot1"/>
+                    <!-- Left -->
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow height="100%" id="gr1">
+                            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                                <!-- Content -->
+                                <af:outputText value="HALLO WELT" id="ot2"/>
+                                <af:button text="nnn" id="b1" action="next"/>
+                            </af:gridCell>
+                            <af:gridCell width="100px" halign="stretch" valign="stretch" id="gc1">
+                                <!-- Right -->
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

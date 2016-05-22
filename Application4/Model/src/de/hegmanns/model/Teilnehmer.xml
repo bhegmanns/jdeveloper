@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Teilnehmer"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TEILNEHMER"
+  AliasName="Teilnehmer"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="TnNr"
+    IsNotNull="true"
+    Precision="4"
+    Scale="0"
+    ColumnName="TN_NR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TEILNEHMER"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="UNr"
+    Precision="5"
+    Scale="0"
+    ColumnName="U_NR"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TEILNEHMER"/>
+  <Attribute
+    Name="TnAnrede"
+    Precision="5"
+    ColumnName="TN_ANREDE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="5"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnVorname"
+    Precision="20"
+    ColumnName="TN_VORNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnNachname"
+    Precision="30"
+    ColumnName="TN_NACHNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnStrasse"
+    Precision="40"
+    ColumnName="TN_STRASSE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="40"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnHausnr"
+    Precision="5"
+    ColumnName="TN_HAUSNR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="5"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnStadtteil"
+    Precision="30"
+    ColumnName="TN_STADTTEIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnLand"
+    Precision="2"
+    ColumnName="TN_LAND"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnPlz"
+    Precision="5"
+    Scale="0"
+    ColumnName="TN_PLZ"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TEILNEHMER"/>
+  <Attribute
+    Name="TnStadt"
+    Precision="30"
+    ColumnName="TN_STADT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TEILNEHMER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TnVorwahl"
+    Precision="10"
+    Scale="0"
+    ColumnName="TN_VORWAHL"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TEILNEHMER"/>
+  <Attribute
+    Name="TnTelnr"
+    Precision="10"
+    Scale="0"
+    ColumnName="TN_TELNR"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="NUMBER"
+    TableName="TEILNEHMER"/>
+  <Key
+    Name="SysC009262"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C009262"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="de.hegmanns.model.Teilnehmer.TnNr"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC009263">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYS_C009257"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C009263"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="de.hegmanns.model.Teilnehmer.UNr"/>
+    </AttrArray>
+  </Key>
+</Entity>

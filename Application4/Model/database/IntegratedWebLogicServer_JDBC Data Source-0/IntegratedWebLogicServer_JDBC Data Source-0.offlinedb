@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProviderSettings xmlns="http://xmlns.oracle.com/ide/hash">
+   <hash n="dataTypeSettings">
+      <value n="databaseType" v="Oracle Database"/>
+      <value n="databaseVersion" v="111"/>
+   </hash>
+   <value n="id" v="8edbb699-4d90-4a25-b3bb-01b4aae04931"/>
+   <value n="name" v="IntegratedWebLogicServer_JDBC Data Source-0"/>
+</ProviderSettings>

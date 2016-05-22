@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="home">
+    <page>/home.jsf</page>
+  </view>
+  <view id="next">
+    <page>/next.jsf</page>
+  </view>
+  <control-flow-rule id="__7">
+    <from-activity-id>home</from-activity-id>
+    <control-flow-case id="__8">
+      <from-outcome>next</from-outcome>
+      <to-activity-id>next</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__11">
+    <from-activity-id>next</from-activity-id>
+    <control-flow-case id="__12">
+      <from-outcome>home</from-outcome>
+      <to-activity-id>home</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>
